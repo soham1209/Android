@@ -5,24 +5,24 @@
         android:id="@+id/home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:icon="@drawable/baseline_add_home_24"
+        android:icon="@drawable/home"
         android:title="Home" />
     <item
         android:id="@+id/video"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:icon="@drawable/baseline_3p_24"
-        android:title="Video" />
+        android:icon="@drawable/video"
+        android:title="@string/video" />
     <item
         android:id="@+id/quizzes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:icon="@drawable/baseline_3p_24"
+        android:icon="@drawable/quizzing"
         android:title="Quizzes" />
     <item
         android:id="@+id/setting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:icon="@drawable/baseline_app_settings_alt_24"
+        android:icon="@drawable/setting"
         android:title="Setting" />
 </menu>

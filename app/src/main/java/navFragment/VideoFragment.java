@@ -1,5 +1,6 @@
-package com.example.educationapp;
+package navFragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,13 +8,21 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
+import com.example.educationapp.MainActivity;
+import com.example.educationapp.R;
+
+import navFragmentActivity.video;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link QuizzesFragment#newInstance} factory method to
+ * Use the {@link VideoFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class QuizzesFragment extends Fragment {
+public class VideoFragment extends Fragment {
+
+    MainActivity mainActivity;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +33,7 @@ public class QuizzesFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public QuizzesFragment() {
+    public VideoFragment() {
         // Required empty public constructor
     }
 
@@ -34,11 +43,11 @@ public class QuizzesFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment QuizzesFragment.
+     * @return A new instance of fragment VideoFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static QuizzesFragment newInstance(String param1, String param2) {
-        QuizzesFragment fragment = new QuizzesFragment();
+    public static VideoFragment newInstance(String param1, String param2) {
+        VideoFragment fragment = new VideoFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -52,6 +61,7 @@ public class QuizzesFragment extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+
         }
     }
 
@@ -59,6 +69,17 @@ public class QuizzesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_quizzes, container, false);
+        View view = inflater.inflate(R.layout.fragment_video, container, false);
+//        Button button = view.findViewById(R.id.javaButton);
+        Button button = view.findViewById(R.id.javaButton);
+        mainActivity=(MainActivity)getActivity();
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), video.class);
+                startActivity(i);
+            }
+        });
+        return view;
     }
 }

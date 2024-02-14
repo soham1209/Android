@@ -9,6 +9,11 @@ import android.os.Bundle;
 
 import com.example.educationapp.databinding.ActivityMainBinding;
 
+import navFragment.HomeFragment;
+import navFragment.QuizzesFragment;
+import navFragment.SettingFragment;
+import navFragment.VideoFragment;
+
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
