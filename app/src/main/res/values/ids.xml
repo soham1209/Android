@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="TextView1" type="id" />
+    <item name="TextView2" type="id" />
+    <item name="email" type="id" />
+    <item name="password" type="id" />
+    <item name="loginbtn" type="id" />
+    <item name="cretext" type="id" />
+    <item name="progbar" type="id" />
+    <item name="fullname" type="id" />
+    <item name="regbutton" type="id" />
+    <item name="phone" type="id" />
+</resources>
